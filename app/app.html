@@ -1,0 +1,37 @@
+<ion-menu [content]="content" class="menus">
+    <ion-header>
+        <ion-toolbar color="navcolor">
+          
+        </ion-toolbar>
+    </ion-header>
+
+
+    <ion-content class="navko" text-center>
+        <br>
+        <br>
+        <img src="../assets/imgs/logo.png" style="vertical-align: middle;" height="20%">
+        <p style="font-family:Impact; color:rgb(0, 0, 0) ;text-shadow: 0 0 5px #f5f5f5; font-size: 20px">OLONGAPO WESLEY</p>
+        <p style="font-family:Impact; margin-top:-5%; text-shadow: 0 0 3px white;font-weight: bold; color:#a03838; font-size:18px">UNITED METHODIST CHURCH</p>
+<div >
+         <div *ngFor="let p of pages" (click)="openPage(p)"  >
+            <p menuClose class="navtext" text-left >
+                <span  style=" font-size: 20px;"><ion-icon name={{p.icon}}></ion-icon> </span>   
+     <span style=" font-size: 18px ;" > {{p.title}}</span>   
+            </p>
+          
+                
+          
+        </div> 
+        <p menuClose class="navtext"  *ngIf= "session == 'yes'" (click)="logout()" text-left  >
+                <span  style=" font-size: 20px;"><ion-icon name="key"></ion-icon> </span>   
+     <span style=" font-size: 18px ;" > Logout</span>   
+            </p>
+
+
+    </div>  
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" color="navcolor" #content swipeBackEnabled="false"></ion-nav>

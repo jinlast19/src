@@ -1,0 +1,86 @@
+<ion-header >
+    <ion-navbar color="navcolor" hideBackButton="true">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title color="primary">UMC</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #ede4e4">
+    
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content></ion-refresher-content>
+              </ion-refresher>
+ 
+    <div class="card-background-page" *ngFor="let x of devotions">
+    
+                    <img src="../assets/imgs/heartdev.jpg"   alt="Image is Loading">
+        
+                    <div class="card-title">{{x.dateofdevotion}}<br>	
+                        {{x.verse}}
+                        </div>
+                    <div class="card-subtitle"> "{{x.info}}"</div>
+                    
+            <!-- <button ion-button (click)="sam()">sam</button> -->
+                </div>
+<!--            
+    
+    <div *ngIf= "session == 'yes'">
+            <ion-segment [(ngModel)]="post">
+              <ion-segment-button value="all" (click) = "all()">
+               All Posts
+              </ion-segment-button>
+              <ion-segment-button value="my" (click) = "my()">
+                My Posts
+              </ion-segment-button>
+            </ion-segment>
+          </div>
+    <ion-card *ngIf= "session == 'yes'" >
+        
+        <ion-card-header   >
+            Add your Devotions here
+        </ion-card-header>
+        <ion-card-content>
+            <ion-textarea #desc placeholder="Enter a description"></ion-textarea>
+        </ion-card-content>
+        <button ion-button secondary style="float:right" (click)="addev(desc.value)">Submit</button>
+
+    </ion-card>
+    <ion-card class="cardko" *ngFor="let x of results">
+       
+        <ion-card-content class="a">
+            "{{x.msg}}"<br>
+            <p style="float:right;padding:5px;padding-right:20px;color:white;font-size:25px">-{{x.postedby}}</p>
+        </ion-card-content> -->
+    <!-- </ion-card> -->
+    <div>
+    <ion-grid text-center padding>
+            <ion-row >
+              <ion-col class="one" (click)="ministry()" style="background-color: #ff2727;height:130px;color:white" >
+            Find Our Ministries
+            <p  style=" font-size: 600%;margin-top:-2%"><ion-icon name="people"></ion-icon></p>
+              </ion-col>
+              <ion-col col-1 ></ion-col>
+              <ion-col (click)="event()" style="background-color: #414141; height:130px;color:white">
+                    Upcoming Events
+                    <p  style=" font-size: 600%;margin-top:-2%"><ion-icon name="calendar"></ion-icon></p>
+              </ion-col >
+            </ion-row>
+              <ion-col col-1 ></ion-col>
+              <ion-row ></ion-row>
+            <ion-row>
+                    <ion-col (click)="service()" style="background-color: #414141; height:130px;color:white"> 
+                            Services
+                            <p  style=" font-size: 600%;margin-top:-2%"><ion-icon name="logo-youtube"></ion-icon></p>
+              </ion-col>        <ion-col col-1 ></ion-col>
+
+              <ion-col (click)="devotion()" style="background-color: #ff2727; height:130px;color:white">
+                    Devotions
+                    <p  style=" font-size: 600%;margin-top:-2%"><ion-icon name="book"></ion-icon></p>
+              </ion-col>
+         
+            </ion-row>
+          </ion-grid>
+          </div>
+</ion-content>

@@ -1,0 +1,27 @@
+page-events {
+    .card-background-page {
+        ion-card {
+            position: relative;
+        }
+        .card-title {
+            position: absolute;
+            top:-2%;
+            padding: 2%;
+            font-size: 1.1em;
+            width: 100%;
+            text-align: justify;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+        .card-subtitle {
+            font-size: 1em;
+            position: absolute;
+            // padding: 5%;
+            top: 7%;
+            text-align: justify;
+            width: 100%;
+            color: rgb(255, 255, 255);
+            font-family: 'sans-serif';
+        }
+    }
+}

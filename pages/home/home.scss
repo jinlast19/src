@@ -1,0 +1,53 @@
+page-home {
+    .cardko {
+        background:  #5c5d62;
+        color: white;
+    }
+    .headko {
+        background:  #5c5d62;
+        color: white;
+    
+        text-shadow: 5px 5px 5px whitek;
+    }
+    .a {
+        background:  #5c5d62;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+        font-family: 'Tempus Sans ITC';
+        font-size: 20px;
+        font-style: bold;
+    }
+    .card-background-page {
+        ion-card {
+            position: relative;
+        }
+        .card-title {
+            position: absolute;
+            top: 6%;
+            padding: 5%;
+            font-size: 1.1em;
+            width: 100%;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+        .card-subtitle {
+            font-size: 1.5em;
+            position: absolute;
+            padding: 5%;
+            top: 15%;
+            width: 100%;
+            color: rgb(5, 5, 5);
+            font-family: 'sans-serif';
+        }
+    }
+    .recent {
+        ion-card {
+            background-color: whitesmoke;
+        }
+    }
+
+    .one:hover{
+        background-color: #414141; height:130px;color:white;
+
+    }
+}
